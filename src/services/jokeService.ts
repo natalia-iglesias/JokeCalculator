@@ -3,7 +3,6 @@ import axios from 'axios';
 const jokeService = {
   async fetchJoke(type?: string) {
     if (!type) {
-      // Si no se especifica tipo, selecciona aleatoriamente entre "chuck" o "dad"
       type = Math.random() > 0.5 ? 'chuck' : 'dad';
     }
 
@@ -20,7 +19,6 @@ const jokeService = {
         return res.data.joke;
       }
 
-      // Si el tipo no es válido, arroja un error
       throw new Error('Tipo de chiste inválido. Usa "chuck" o "dad".');
     } catch (error: any) {
       throw new Error('Error al obtener el chiste: ' + error.message);

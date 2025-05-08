@@ -9,7 +9,7 @@ function getLCM(numbers: number[]): number {
 
 // Controlador de LCM
 export const lcm = (req: Request, res: Response): Response => {
-  const { numbers } = req.query as { numbers?: string }; // Asegúrate de que `numbers` sea una cadena
+  const { numbers } = req.query as { numbers?: string };
 
   // Validar que los números estén presentes
   if (!numbers || typeof numbers !== 'string') {

@@ -1,7 +1,6 @@
 import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
 import { sequelize } from '../database/index';
 
-// Definimos una interfaz para los campos de la tabla
 interface JokeAttributes {
   id: number;
   text: string;
@@ -29,7 +28,7 @@ Joke.init(
   {
     sequelize,
     tableName: 'jokes',
-    timestamps: false, // Si no usás createdAt y updatedAt
+    timestamps: false,
   }
 );
 
